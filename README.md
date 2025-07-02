@@ -20,8 +20,10 @@ Analisar qual destas lojas tem um desempenho menor do que as outras
 
 ---
 
-# link
+# links
 
-[trello](https://trello.com/b/IMCMcivD/alura-store-latam)
-[git hub](https://github.com/alura-es-cursos/challenge1-data-science/tree/main)
-[coolab](https://colab.research.google.com/drive/1_4gnBSYaXRJkjNzFZAYqD9DedTSOZL_1#scrollTo=RhEdWd9YUR6H)
+* [trello](https://trello.com/b/IMCMcivD/alura-store-latam)
+
+* [git hub](https://github.com/alura-es-cursos/challenge1-data-science/tree/main)
+
+* [coolab](https://colab.research.google.com/drive/1_4gnBSYaXRJkjNzFZAYqD9DedTSOZL_1#scrollTo=RhEdWd9YUR6H)
