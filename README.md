@@ -22,8 +22,8 @@ Analisar qual destas lojas tem um desempenho menor do que as outras
 
 # links
 
-* [trello](https://trello.com/b/IMCMcivD/alura-store-latam)
-
+* [trello]([https://trello.com/b/IMCMcivD/alura-store-latam](https://trello.com/b/IMCMcivD/alura-store-latam))
+<https://trello.com/b/IMCMcivD/alura-store-latam>
 * [git hub](https://github.com/alura-es-cursos/challenge1-data-science/tree/main)
 
 * [coolab](https://colab.research.google.com/drive/1_4gnBSYaXRJkjNzFZAYqD9DedTSOZL_1#scrollTo=RhEdWd9YUR6H)
