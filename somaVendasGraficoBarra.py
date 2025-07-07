@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import pandas as pd
 
-
+# --- para tirar o faturamento total de cada loja ---
 
 url = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_1.csv"
 url2 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_2.csv"
@@ -22,15 +22,13 @@ loja4['loja_id'] = 'loja_4'
 
 # --- concatenado os dados das lojas
 dados = pd.concat([loja, loja2, loja3, loja4])
-# --- PASSO 1: Preparar os dados (garantir que são numéricos) ---
-# Se você já executou este comando, pode pular. Estamos apenas garantindo
-# que temos os dados brutos para o gráfico.
+
+# --- atribuindo a variavel o a soma total de vendas de cada loja 
 faturamento_numerico = dados.groupby('loja_id')['Preço'].sum()
 
-# --- PASSO 2: Criar o Gráfico de Barras com Matplotlib ---
 
 # Define o tamanho da figura (opcional, mas ajuda na visualização)
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(12, 8))
 
 # Cria o gráfico de barras
 # .index pega os nomes das lojas (loja_1, loja_2, etc.)
@@ -44,17 +42,21 @@ plt.ylabel('Faturamento (R$)', fontsize=12)
 plt.xticks(rotation=0) # Mantém os nomes das lojas na horizontal
 
 # Formata o eixo Y para exibir como moeda
-formatter = mtick.FormatStrFormatter('R$ {:,.0f}')
+formatter = mtick.StrMethodFormatter('{x:,.2f}') # Formata com 2 casas decimais
 plt.gca().yaxis.set_major_formatter(formatter)
 
-# Adiciona os rótulos de valor em cima de cada barra (opcional)
+# --- Adicionar Rótulos no Topo das Barras Verticais ---
+# A lógica aqui é a mesma, mas usando plt.text
 for barra in barras:
-    yval = barra.get_height()
-    plt.text(barra.get_x() + barra.get_width()/2.0, yval, f'R${yval:,.0f}', va='bottom', ha='center') # va='bottom' para o texto ficar acima da barra
+    altura = barra.get_height()
+    plt.text(
+        x=barra.get_x() + barra.get_width() / 2, # Posição X no centro da barra
+        y=altura + 0.05, # Posição Y um pouco acima da barra
+        s=f'{altura:,.2f}', # O texto com 2 casas decimais
+        ha='center', # Alinhamento horizontal
+        va='bottom'  # Alinhamento vertical
+    )
 
-
-# Otimiza o layout para que nada fique cortado
+# Otimiza o layout para que nada fique cortado e exibe o gráfico
 plt.tight_layout()
-
-# Exibe o gráfico
 plt.show()
