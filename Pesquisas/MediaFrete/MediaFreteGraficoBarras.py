@@ -20,10 +20,10 @@ loja4['loja_id'] = 'loja_4'
 
 dados = pd.concat([loja, loja2, loja3, loja4])
 
-media_avaliacao = dados.groupby('loja_id')['Frete'].mean()
+media_frete = dados.groupby('loja_id')['Frete'].mean()
 
 plt.figure(figsize=(12, 8))
-barras = plt.bar(media_avaliacao.index, media_avaliacao.values, color=['#d62728', '#ff7f0e', '#1f77b4', '#2ca02c' ])
+barras = plt.bar(media_frete.index, media_frete.values, color=['#d62728', '#ff7f0e', '#1f77b4', '#2ca02c' ])
 
 # --- Títulos
 plt.title('Média de frete de cada loja', fontsize=16)
