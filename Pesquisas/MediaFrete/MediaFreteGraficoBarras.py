@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
-from matplotlib.ticker import FuncFormatter  # Personalizar números dos eixos com segurança
+from matplotlib.ticker import FuncFormatter  # --- Personalizar números dos eixos com segurança
 import pandas as pd
 
 url = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_1.csv"

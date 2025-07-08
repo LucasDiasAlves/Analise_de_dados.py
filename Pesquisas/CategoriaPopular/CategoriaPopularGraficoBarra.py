@@ -28,7 +28,7 @@ mais_populares = dados['Categoria do Produto'].value_counts()
 
 plt.figure(figsize=(12, 8))
 
-barras = plt.bar(mais_populares.index, mais_populares.values, color=['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', "#2E5A14", "#1DBDE6", "#FF9595", "#000000"])
+barras = plt.bar(mais_populares.index, mais_populares.values, color=["#1fc510", "#157915", "#14465A", "#244FC7", "#060A4D", "#ff7f0e", "#d62728", "#000000"])
 
 # --- titulos para melhor vizualização 
 plt.title('categorias de produtos mais populares', fontsize=16)

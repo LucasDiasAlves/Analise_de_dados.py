@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# --- PASSO 1: Carregar e preparar os dados (exatamente como no primeiro código) ---
+# --- Para tirar o faturamento total de cada loja 
+
 url = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_1.csv"
 url2 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_2.csv"
 url3 = "https://raw.githubusercontent.com/alura-es-cursos/challenge1-data-science/refs/heads/main/base-de-dados-challenge-1/loja_3.csv"
@@ -19,17 +20,12 @@ loja4['loja_id'] = 'loja_4'
 
 dados = pd.concat([loja, loja2, loja3, loja4])
 
-# Agrupar os dados por loja para obter o faturamento total de cada uma
 faturamento_por_loja = dados.groupby('loja_id')['Preço'].sum()
 
-
-# --- PASSO 2: Criar o Gráfico de Pizza ---
-
-# Define o tamanho da figura
 plt.figure(figsize=(10, 8))
 
 # Define as cores (opcional, para manter consistência com o gráfico de barras)
-cores = ['#ff7f0e', '#1f77b4', '#2ca02c', '#d62728']
+cores = ['#2ca02c', '#1f77b4', '#ff7f0e', '#d62728']
 
 # Lógica para "explodir" (destacar) a maior fatia
 explode = [0] * len(faturamento_por_loja)  # Cria uma lista de zeros
@@ -53,6 +49,4 @@ plt.title('Distribuição Percentual do Faturamento por Loja', fontsize=16)
 
 # Garante que o gráfico seja um círculo perfeito
 plt.axis('equal')
-
-# Exibe o gráfico
 plt.show()
