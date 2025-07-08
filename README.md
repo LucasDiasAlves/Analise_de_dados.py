@@ -1,7 +1,7 @@
 # arquivios
-\pesquisa\ **contem arquivos em python que foram utilziados para gerar rgáficos e pesquisas, utilizados no editor de código vscode**
-\AluraStoreBr.ipynb\ **notebook utilizado no google colab** 100% completo
-\conclusão.md\ **Arquivo em Markdown, descrevendo a conclusão da analise, também presente no notebook**
+\pesquisa\ - **contem arquivos em python que foram utilziados para gerar rgáficos e pesquisas, utilizados no editor de código vscode**<br>
+\AluraStoreBr.ipynb\ - **notebook utilizado no google colab** 100% completo<br>
+\conclusão.md\ - **Arquivo em Markdown, descrevendo a conclusão da analise, também presente no notebook**<br>
 
 ---
 
